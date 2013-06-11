@@ -8,15 +8,36 @@
     <meta name=description content="Genadi Samokovarov's home page">
     <meta name=author content="Genadi Samokovarov">
 
-    <style>
-      section { display: block; }
-      body { margin: 0; }
-      h1 { margin: 0; }
+    <link rel=stylesheet href=vendor/reveal.js/css/reveal.css>
+    <link rel=stylesheet href=vendor/reveal.js/css/theme/simple.css>
 
-      .me img { background: transparent; border: 0; box-shadow: none; margin: 0; vertical-align: middle; }
-      .me a:hover { background: transparent; border: 0; box-shadow: none; }
-      .me a.image { text-decoration: none; }
-      .me .spin:hover { -moz-animation: spin 2s infinite linear; -o-animation: spin 2s infinite linear; -webkit-animation: spin 2s infinite linear; animation: spin 2s infinite linear; }
+    <style>
+      .reveal,
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 { font-family: Palatino, Georgia, serif; }
+
+      .reveal h1 { font-size: 2.2em; text-shadow: none; }
+      .reveal h2 { font-size: 1.9em; }
+      .reveal h3 { font-size: 1.8em; }
+      .reveal h4 { font-size: 1.5em; }
+      .reveal h5 { font-size: 1.2em; }
+
+      .reveal ul { margin-left: 0; }
+
+      .reveal pre.inline { box-shadow: none; }
+      .reveal img.inline { background: transparent; border: 0; box-shadow: none; margin: 0; vertical-align: middle; }
+      .reveal li.inline { list-style: none; }
+      .reveal a:hover img.inline { background: transparent; border: 0; box-shadow: none; }
+
+      .reveal a.image { text-decoration: none; }
+
+      .reveal .hidden { visibility: hidden; }
+
+      .reveal .spin:hover { -moz-animation: spin 2s infinite linear; -o-animation: spin 2s infinite linear; -webkit-animation: spin 2s infinite linear; animation: spin 2s infinite linear; }
 
       @-moz-keyframes spin {
         0%   { -moz-transform: rotate(0deg); }
@@ -41,12 +62,34 @@
     </style>
   </head>
   <body>
-    <section class=me>
-      <p align=center><img class=spin src=img/me.png></p>
-      <div align=center class=contacts>
-        <a class=image href=http://github.com/gsamokovarov><img src=img/github.png></a>
-        <a class=image href=http://twitter.com/gsamokovarov><img src=img/twitter.png></a>
+    <div class=reveal>
+      <div class=slides>
+        <section>
+          <h1>Genadi Samokovarov</h1>
+          <p align=center><img class="inline spin" src=img/me.png></p>
+          <ul>
+            <li align=center class=inline>
+              <a href=https://github.com/gsamokovarov>Fork @ <img class=inline src=img/github.png></a>
+              /
+              <a href=http://twitter.com/gsamokovarov>Follow @ <img class=inline src=img/twitter.png></a>
+            </li>
+          </ul>
+        </section>
       </div>
-    </section>
+    </div>
+
+    <script src=vendor/reveal.js/lib/js/head.min.js></script>
+    <script src=vendor/reveal.js/js/reveal.js></script>
+
+    <script>
+      Reveal.initialize({
+        controls: false,
+        progress: false,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: 'none'
+      });
+    </script>
   </body>
 </html>
