@@ -9,9 +9,8 @@ $default-box-shadow-settings: 0 8px 12px 0 $default-box-shadow-color;
   background-color: $outer-background-color;
 
   article {
-    width: 90%;
-    max-width: 480px;
-    margin: 20px auto;
+    width: 480px;
+    margin: 0 auto;
 
     header {
       background-image: url('../img/arrow-up.png');
@@ -19,7 +18,7 @@ $default-box-shadow-settings: 0 8px 12px 0 $default-box-shadow-color;
       background-repeat: repeat-x;
       background-color: $inner-background-color;
       box-shadow: 0 16px 12px 0 $default-box-shadow-color;
-      padding: 20px 0 20px 0;
+      padding: 20px 0 1px 0;
 
       img { padding: 10px 20px 10px 20px; float: left; }
       h1 { font-size: 35px; margin: 40px 0; line-height: 40px; padding-left: 116px; }
@@ -28,12 +27,13 @@ $default-box-shadow-settings: 0 8px 12px 0 $default-box-shadow-color;
     section {
       background-color: $inner-background-color;
       box-shadow: 0 8px 12px 0 $default-box-shadow-color;
-      padding: 20px;
+      padding: 1px 0 1px 0px;
 
       ul {
-        padding: -20px 20px -20px 20px;
+        padding: 0;
+        text-align: center;
 
-        li { list-style: none; }
+        li { display: inline; list-style: none; }
       }
     }
 
