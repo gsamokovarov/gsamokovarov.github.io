@@ -5,6 +5,7 @@
     "grunt": "~0.4.1",
     "grunt-contrib-sass": "~0.3.0",
     "grunt-contrib-watch": "~0.4.4",
-    "grunt-contrib-cssmin": "~0.6.1"
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-rework": "0.0.3"
   }
 }

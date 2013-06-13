@@ -8,15 +8,22 @@ module.exports = (grunt) ->
     cssmin:
       main:
         files:
-          'css/main.css': ['components/normalize-css/normalize.css', 'build/main.css']
+          'css/main.css': ['components/normalize-css/normalize.css', 'build/prefixed.main.css']
+
+    rework:
+      'build/prefixed.main.css': 'build/main.css'
+      options:
+        use: [['rework.prefix', 'transition']]
+        vendors: ['-moz-', '-webkit-', '-o-']
 
     watch:
       sass:
         files: ['sass/*.scss']
-        tasks: ['sass', 'cssmin']
+        tasks: ['sass', 'rework', 'cssmin']
 
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
+  grunt.loadNpmTasks 'grunt-rework'
 
-  grunt.registerTask 'default', ['sass', 'cssmin']
+  grunt.registerTask 'default', ['sass', 'rework', 'cssmin']
