@@ -13,7 +13,10 @@ module.exports = (grunt) ->
     rework:
       'build/prefixed.main.css': 'build/main.css'
       options:
-        use: [['rework.prefix', 'transition']]
+        use: [
+          ['rework.prefix', 'transition']
+          ['rework.prefix', 'box-shadow']
+        ]
         vendors: ['-moz-', '-webkit-', '-o-']
 
     watch:
