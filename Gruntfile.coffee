@@ -18,7 +18,7 @@ module.exports = (grunt) ->
           ['rework.prefix', 'transition']
           ['rework.prefix', 'transform']
         ]
-        vendors: ['-moz-', '-webkit-', '-o-']
+        vendors: ['-moz-', '-webkit-', '-ms-', '-o-']
 
     watch:
       sass:
