@@ -7,7 +7,6 @@ $default-box-shadow-color: #b5b5b5;
 .me {
   font-family: Alef, sans-serif;
   background-color: $outer-background-color;
-  perspective: 600;
 
   article {
     color: $inner-color;
@@ -30,7 +29,7 @@ $default-box-shadow-color: #b5b5b5;
         cursor: pointer;
         transition: all .5s ease;
 
-        &:hover { transform: rotateY(-180deg); }
+        &:hover { transform: perspective(600px) rotateY(-180deg); }
       }
 
       h1 { font-size: 35px; margin: 40px 0; line-height: 40px; padding-left: 116px; }

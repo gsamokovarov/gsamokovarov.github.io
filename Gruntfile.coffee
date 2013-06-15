@@ -15,7 +15,6 @@ module.exports = (grunt) ->
       options:
         use: [
           ['rework.prefix', 'box-shadow']
-          ['rework.prefix', 'perspective']
           ['rework.prefix', 'transition']
           ['rework.prefix', 'transform']
         ]
