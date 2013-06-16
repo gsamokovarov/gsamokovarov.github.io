@@ -119,6 +119,8 @@ $mobile-constraints: "screen and (max-width: 420px)";
             &.github { transform: scale(0.75); }
             &.twitter { transform: scale(0.75); }
             &.soundcloud { transform: scale(0.75); }
+
+            &:hover { transform: scale(0.75) translateY(3px); }
           }
         }
 
