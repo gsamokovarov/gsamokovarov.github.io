@@ -4,6 +4,7 @@ $inner-background-color: #fff;
 $inner-color: #333;
 $link-background-color: #00003f;
 $default-box-shadow-color: #b5b5b5;
+$mobile-constraints: "screen and (max-width: 420px)";
 
 .me {
   font-family: Alef, sans-serif;
@@ -11,8 +12,10 @@ $default-box-shadow-color: #b5b5b5;
 
   article {
     color: $inner-color;
-    width: 480px;
+    max-width: 480px;
     margin: 20px auto;
+
+    @media #{$mobile-constraints} { margin: 20px 0 0 0; }
 
     header {
       background: { image: url('../img/arrow-up.png'); repeat: repeat-x; color: $inner-background-color; }
@@ -26,17 +29,28 @@ $default-box-shadow-color: #b5b5b5;
         cursor: pointer;
         transition: all .5s ease;
 
+        @media #{$mobile-constraints} { display: block; float: none; padding: 5px; margin: 0 auto; }
+
         &:hover { transform: perspective(600px) rotateY(-180deg); }
       }
 
-      h1 { font-size: 35px; margin: 40px 0; line-height: 40px; padding-left: 116px; }
+      h1 {
+        font-size: 35px;
+        margin: 40px 0;
+        line-height: 40px;
+        padding-left: 116px;
+
+        @media #{$mobile-constraints} { margin: 5px; padding: 0; font-size: 25px; line-height: 30px; text-align: center; }
+      }
     }
 
     section {
       background-color: $inner-background-color;
       box-shadow: 0 8px 12px 0 $default-box-shadow-color;
-      padding: 1px 0 1px 0px;
+      padding: 1px 0;
       margin: 0;
+
+      @media #{$mobile-constraints} { font-size: 14px; }
 
       &.personal {
         // Ripped that off from reveal.js.
@@ -78,7 +92,12 @@ $default-box-shadow-color: #b5b5b5;
           &:hover span { background: rgba(0, 0, 0, 0.5); transform: translate3d( 0px, 0px, -45px ) rotateX( 90deg ); }
         }
 
-        p { text-align: justify; margin: 10px 20px; }
+        p {
+          text-align: justify;
+          margin: 10px 20px;
+
+          @media #{$mobile-constraints} { margin: 5px 10px; }
+        }
       }
 
       &.social {
@@ -93,6 +112,14 @@ $default-box-shadow-color: #b5b5b5;
           &.soundcloud { background: url('../img/soundcloud.png'); width: 64px; }
 
           &:hover { transform: translateY(4px); }
+
+          @media #{$mobile-constraints} {
+            margin: 0;
+
+            &.github { transform: scale(0.75); }
+            &.twitter { transform: scale(0.75); }
+            &.soundcloud { transform: scale(0.75); }
+          }
         }
 
         ul {
@@ -100,6 +127,8 @@ $default-box-shadow-color: #b5b5b5;
           text-align: center;
 
           li { display: inline; list-style: none; }
+
+          @media #{$mobile-constraints} { margin: 0; }
         }
       }
     }
@@ -109,6 +138,8 @@ $default-box-shadow-color: #b5b5b5;
       color: $outer-color;
       padding: 20px;
       text-align: center;
+
+      @media #{$mobile-constraints} { padding: 20px 0 10px 0; }
     }
   }
 }
