@@ -92,7 +92,7 @@ $default-box-shadow-color: #b5b5b5;
           &.twitter { background: url('../img/twitter.png'); width: 78px; }
           &.soundcloud { background: url('../img/soundcloud.png'); width: 64px; }
 
-          &:hover { position: relative; top: 4px; }
+          &:hover { transform: translateY(4px); }
         }
 
         ul {
