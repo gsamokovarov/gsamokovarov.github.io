@@ -14,7 +14,7 @@ $default-box-shadow-color: #b5b5b5;
     margin: 20px auto;
 
     header {
-      background: { image: url('../img/arrow-up.png'); position: 0 0; repeat: repeat-x; color: $inner-background-color; }
+      background: { image: url('../img/arrow-up.png'); repeat: repeat-x; color: $inner-background-color; }
       box-shadow: 0 16px 12px 0 $default-box-shadow-color;
       padding: 19px 0 1px 0;
       margin: 0;
@@ -59,7 +59,7 @@ $default-box-shadow-color: #b5b5b5;
     }
 
     footer {
-      background: { image: url('../img/arrow-down.png'); position: 0 0; repeat: repeat-x; }
+      background: { image: url('../img/arrow-down.png'); repeat: repeat-x; }
       color: $outer-color;
       padding: 20px;
       text-align: center;
