@@ -17,6 +17,11 @@ module.exports = (grunt) ->
           ['rework.prefix', 'box-shadow']
           ['rework.prefix', 'transition']
           ['rework.prefix', 'transform']
+          ['rework.prefix', 'transform-origin']
+          ['rework.prefix', 'transform-style']
+          ['rework.prefix', 'perspective']
+          ['rework.prefix', 'perspective-origin']
+          ['rework.prefix', 'backface-visibility']
         ]
         vendors: ['-moz-', '-webkit-', '-ms-', '-o-']
 
