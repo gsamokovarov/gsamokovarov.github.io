@@ -112,7 +112,6 @@ $mobile-constraints: "screen and (max-width: 480px)";
           &.soundcloud { background: url('../img/soundcloud.png'); width: 64px; }
 
           &:hover { transform: translateY(4px); }
-
         }
 
         ul {
@@ -120,8 +119,6 @@ $mobile-constraints: "screen and (max-width: 480px)";
           text-align: center;
 
           li { display: inline; list-style: none; }
-
-
         }
 
         @media #{$mobile-constraints} {
