@@ -84,12 +84,12 @@ $mobile-constraints: "screen and (max-width: 480px)";
               top: 0;
               padding: 0 2px;
               backface-visibility: hidden;
-              transform: translate3d( 0px, 110%, 0px ) rotateX( -90deg );
+              transform: translate3d(0px, 110%, 0px) rotateX(-90deg);
               transform-origin: 50% 0%;
             }
           }
 
-          &:hover span { background: rgba(0, 0, 0, 0.5); transform: translate3d( 0px, 0px, -45px ) rotateX( 90deg ); }
+          &:hover span { background: rgba(0, 0, 0, 0.5); transform: translate3d(0px, 0px, -45px) rotateX(90deg); }
         }
 
         p {
