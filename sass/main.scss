@@ -5,17 +5,22 @@ $inner-color: #333;
 $link-background-color: #00003f;
 $default-box-shadow-color: #b5b5b5;
 $mobile-constraints: "screen and (max-width: 480px)";
+$article-width: 480px;
 
 .me {
   font-family: Alef, sans-serif;
   background-color: $outer-background-color;
+  margin: 0px;
 
   article {
     color: $inner-color;
-    max-width: 480px;
+    max-width: $article-width;
     margin: 20px auto;
 
-    @media #{$mobile-constraints} { margin: 20px 0 0 0; }
+    @media #{$mobile-constraints} {
+      max-width: 100%;
+      margin: 20px 0 0 0;
+    }
 
     header {
       background: { image: url('../img/arrow-up.png'); repeat: repeat-x; color: $inner-background-color; }
@@ -109,6 +114,7 @@ $mobile-constraints: "screen and (max-width: 480px)";
 
           &.github { background: url('../img/github.png'); width: 64px; }
           &.twitter { background: url('../img/twitter.png'); width: 78px; }
+          &.medium { background: url('../img/medium.png'); width: 64px; }
           &.soundcloud { background: url('../img/soundcloud.png'); width: 64px; }
 
           &:hover { transform: translateY(4px); }
@@ -127,6 +133,7 @@ $mobile-constraints: "screen and (max-width: 480px)";
 
             &.github { transform: scale(0.75); }
             &.twitter { transform: scale(0.75); }
+            &.medium { transform: scale(0.75); }
             &.soundcloud { transform: scale(0.75); }
 
             &:hover { transform: scale(0.75) translateY(3px); }
