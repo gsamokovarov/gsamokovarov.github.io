@@ -101,7 +101,7 @@ $article-width: 480px;
         p { text-align: justify; margin: 10px 20px; }
 
         @media #{$mobile-constraints} {
-          p {margin: 5px 10px; }
+          p { margin: 5px 10px; }
         }
       }
 
