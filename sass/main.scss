@@ -12,47 +12,51 @@ $article-width: 480px;
   background-color: $outer-background-color;
   margin: 0px;
 
-  article {
-    color: $inner-color;
-    max-width: $article-width;
+  header {
+    background: { image: url('../img/arrow-up.png'); repeat: repeat-x; color: $inner-background-color; }
+    padding: 19px 0 1px 0;
+    margin: 0;
+
+    img {
+      float: left;
+      padding: 10px 20px 10px 20px;
+      cursor: pointer;
+      transition: all .5s ease;
+
+      &:hover { transform: perspective(600px) rotateY(-180deg); }
+    }
+
+    h1 {
+      font-size: 35px;
+      margin: 40px 0;
+      line-height: 40px;
+      padding-left: 116px;
+    }
+
+    @media #{$mobile-constraints} {
+      img { display: block; float: none; padding: 5px; margin: 0 auto; }
+      h1 { margin: 5px; padding: 0; font-size: 25px; line-height: 30px; text-align: center; }
+    }
+
     margin: 20px auto;
+    margin-bottom: 0;
 
     @media #{$mobile-constraints} {
       max-width: 100%;
       margin: 20px 0 0 0;
     }
+  }
 
-    header {
-      background: { image: url('../img/arrow-up.png'); repeat: repeat-x; color: $inner-background-color; }
-      box-shadow: 0 16px 12px 0 $default-box-shadow-color;
-      padding: 19px 0 1px 0;
-      margin: 0;
+  article {
+    color: $inner-color;
+    box-shadow: 0 12px 12px -2px $default-box-shadow-color;
+    max-width: $article-width;
+    margin: 0 auto;
 
-      img {
-        float: left;
-        padding: 10px 20px 10px 20px;
-        cursor: pointer;
-        transition: all .5s ease;
-
-        &:hover { transform: perspective(600px) rotateY(-180deg); }
-      }
-
-      h1 {
-        font-size: 35px;
-        margin: 40px 0;
-        line-height: 40px;
-        padding-left: 116px;
-      }
-
-      @media #{$mobile-constraints} {
-        img { display: block; float: none; padding: 5px; margin: 0 auto; }
-        h1 { margin: 5px; padding: 0; font-size: 25px; line-height: 30px; text-align: center; }
-      }
-    }
+    @media #{$mobile-constraints} { max-width: 100%; }
 
     section {
       background-color: $inner-background-color;
-      box-shadow: 0 8px 12px 0 $default-box-shadow-color;
       padding: 1px 0;
       margin: 0;
 
@@ -143,14 +147,20 @@ $article-width: 480px;
         }
       }
     }
+  }
 
-    footer {
-      background: { image: url('../img/arrow-down.png'); repeat: repeat-x; }
-      color: $outer-color;
-      padding: 20px;
-      text-align: center;
+  footer {
+    background: { image: url('../img/arrow-down.png'); repeat: repeat-x; }
+    color: $outer-color;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    max-width: $article-width;
+    margin: 20px auto;
+    margin-top: 0;
 
-      @media #{$mobile-constraints} { padding: 20px 0 10px 0; }
+    @media #{$mobile-constraints} {
+      max-width: 100%;
+      margin: 0 0 10px 0;
     }
   }
 }
