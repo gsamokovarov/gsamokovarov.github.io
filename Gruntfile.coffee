@@ -17,7 +17,7 @@ module.exports = (grunt) ->
     cssmin:
       main:
         files:
-          'css/main.css': ['bower_components/normalize-css/normalize.css', 'build/prefixed.main.css']
+          'css/main.css': $w 'bower_components/normalize-css/normalize.css build/prefixed.main.css'
 
     autoprefixer:
       main:
@@ -26,8 +26,8 @@ module.exports = (grunt) ->
 
     watch:
       sass:
-        files: ['sass/*.scss']
-        tasks: ['sass', 'autoprefixer', 'cssmin']
+        files: $w 'sass/*.scss'
+        tasks: $w 'sass autoprefixer cssmin'
 
   grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-bower-task'
