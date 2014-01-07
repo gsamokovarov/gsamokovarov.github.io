@@ -43,7 +43,7 @@ $article-width: 480px;
 
     @media #{$mobile-constraints} {
       max-width: 100%;
-      margin: 20px 0 0 0;
+      margin: 0;
     }
   }
 
@@ -160,7 +160,7 @@ $article-width: 480px;
 
     @media #{$mobile-constraints} {
       max-width: 100%;
-      margin: 0 0 10px 0;
+      margin: 0;
     }
   }
 }
