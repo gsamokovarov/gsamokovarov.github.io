@@ -22,19 +22,30 @@
       background-color: var(--background);
       display: flex;
       flex-direction: column;
-      font-family: system-ui serif;
+      font-family: system-ui;
       gap: var(--spacing);
       padding: var(--spacing) var(--spacing) calc(var(--spacing) * 2);
       height: 100vh;
       justify-content: center;
     }
 
-    section { font-size: 36px; text-align: center; color: var(--gray-dark); }
+    section {
+      font-size: 36px;
+      background-color: var(--gray);
+      border-radius: 8px;
+      padding: var(--spacing);
+      box-shadow: var(--black) 2px 2px 12px -4px;
+    }
+    small { font-size: 18px; color: var(--gray-dark); text-transform: uppercase; }
+    small a { color: var(--white); font-weight: bold; }
   </style>
 </head>
   <body>
     <section>
       Negative does not collect any data from your device or your browser.
     </section>
+    <small>
+      Email <a href=mailto:genadi@hey.com>genadi@hey.com</a> for support.
+    </small>
   </body>
 </html>
